@@ -29,7 +29,9 @@ def write_csv(fp, arr, header):
 
 # 打印日志
 def log(msg):
+    print("")
     print("=== " + msg + " ===")
+    print("")
 
 
 def print_arr(arr):

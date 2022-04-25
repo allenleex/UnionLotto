@@ -30,3 +30,8 @@ def write_csv(fp, arr, header):
 # 打印日志
 def log(msg):
     print("=== " + msg + " ===")
+
+
+def print_arr(arr):
+    for row in arr:
+        pass

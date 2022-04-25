@@ -3,12 +3,14 @@ import pandas as pd
 import common as m
 import numpy
 import common as m
+from sklearn.datasets import load_iris
 
-COL_RANK = "OCCURRENCE_RANK"
+COL_SORT = "OCCURRENCE"
 # 数据文件
 # 五等奖
 CSV_4_0 = "data/statistics_4_red.csv"
 CSV_3_1 = "data/statistics_3_red_1_blue.csv"
+MAX_SIZE = 10
 
 
 # 一等奖
@@ -35,10 +37,15 @@ def fourth_prize():
 def fifth_prize():
     m.log("五等奖 推荐组合")
 
-    # data = pd.read_csv(CSV_4_0, encoding='utf-8', engine='python')
-    # data[COL_RANK] = data['OCCURRENCE'].rank(method='first', ascending=False)
-    # data.sort_values(COL_RANK, inplace=True)
-    # print(data)
+    m.log("4个红球")
+    data = pd.read_csv(CSV_4_0, encoding='utf-8', engine='python')
+    data = data.sort_values(by=COL_SORT, ascending=False).head(MAX_SIZE)
+    print(data.to_string())
+
+    m.log("3个红球 + 1个蓝球")
+    data = pd.read_csv(CSV_3_1, encoding='utf-8', engine='python')
+    data = data.sort_values(by=COL_SORT, ascending=False).head(MAX_SIZE)
+    print(data.to_string())
 
     pass
 

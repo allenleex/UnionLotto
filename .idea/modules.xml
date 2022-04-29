@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/UnionLotto.iml" filepath="$PROJECT_DIR$/.idea/UnionLotto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bootstrap-flask/.idea/bootstrap-flask.iml" filepath="$PROJECT_DIR$/../bootstrap-flask/.idea/bootstrap-flask.iml" />
     </modules>
   </component>
 </project>

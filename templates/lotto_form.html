@@ -4,6 +4,33 @@
 {% block content %}
 
     <h2>Lotto Form</h2>
-    {{ render_form(form) }}
+<!--    {{ render_form(form) }}-->
+    {{ render_form_row(
+        [form.issue_code, form.pool_amount, form.first_count, form.first_amount,
+         form.second_count, form.second_amount, form.total_amount, form.draw_date],
+        col_map={
+            'issue_code': 'col-md-2',
+            'sunday': 'col-md-1',
+            'pool_amount': 'col-md-1',
+            'first_count': 'col-md-1',
+            'first_amount': 'col-md-1',
+            'second_count': 'col-md-1',
+            'second_amount': 'col-md-1',
+            'total_amount': 'col-md-2',
+            'draw_date': 'col-md-2'
+        }
+    ) }}
+    {{ render_form_row(
+        [form.red1, form.red2, form.red3, form.red4, form.red5, form.red6, form.blue],
+        col_map={
+            'red1': 'col-md-1',
+            'red2': 'col-md-1',
+            'red3': 'col-md-1',
+            'red4': 'col-md-1',
+            'red5': 'col-md-1',
+            'red6': 'col-md-1',
+            'blue': 'col-md-1'
+        }
+    ) }}
 
 {% endblock %}
